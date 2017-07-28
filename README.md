@@ -1,4 +1,4 @@
-Spotify Web API Node
+Spotify Web API Node - Fork
 ==================
 
 [![Tests](https://travis-ci.org/thelinmichael/spotify-web-api-node.svg?branch=master)](https://travis-ci.org/thelinmichael/spotify-web-api-node)
