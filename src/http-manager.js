@@ -1,7 +1,8 @@
 'use strict';
 
-var superagent = require('superagent'),
-    WebApiError = require('./webapi-error');
+var WebApiError = require('./webapi-error');
+
+var superagent = require('superagent-use')(require('superagent'));
 
 require('superagent-cache')(superagent);
 
@@ -12,6 +13,8 @@ var throttle = new Throttle({
     ratePer: 1000,   // number of ms in which `rate` requests may be sent
     concurrent: 2    // how many requests can be sent concurrently
 })
+
+superagent.use(throttle.plugin());
 
 var HttpManager = {};
 
